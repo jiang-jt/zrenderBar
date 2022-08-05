@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,user-scalable=no"
+      ,maximum-scale="1.0,minimum-scale"
+      ="1.0"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/zrender@4.3.0/dist/zrender.js"></script>
+    <script src="./bar.js"></script>
+    <title>zrender入门</title>
+  </head>
+  <body>
+    <div class="example-container" style="width: 1000px; height: 400px"></div>
+    <div></div>
+    <script>
+      new Bar(document.querySelector(".example-container"), {
+        data: [
+          [320, 200, 150, 150, 70, 110, 130, 70, 110, 130, 70, 110, 130],
+          [400, 200, 150, 120, 70, 110, 300, 70, 110, 130, 70, 110, 130],
+        ],
+        xAxis: {
+          data: [
+            "一月",
+            "二月",
+            "三月",
+            "四月",
+            "五月",
+            "六月",
+            "七月",
+            "八月",
+            "九月",
+            "十月",
+            "十一月",
+            "十二月",
+          ],
+        },
+        barColor: ["rgb(84 112 198)", "rgb(250 200 88)"],
+        backgroundColor: "#ccc",
+        title: "销售量/月",
+        legends:['水果','肉类']
+      });
+    </script>
+  </body>
+</html>
